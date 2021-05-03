@@ -103,9 +103,9 @@ public class SolutionTest {
     	SavingsAccount savingsAccount2 = new SavingsAccount(50000);
     	
     	CheckingAccount checkingAccount3 =new CheckingAccount(50000);
-    	SavingsAccount savingsAccount3 = new SavingsAccount(130000);
+    	SavingsAccount savingsAccount3 = new SavingsAccount(130000); // 246,000
     	
-       	CheckingAccount checkingAccount4 =new CheckingAccount(5000);
+       	CheckingAccount checkingAccount4 =new CheckingAccount(5000); // 251,000
     	SavingsAccount savingsAccount4 = new SavingsAccount(50000);    	
 
     	accountHolder.addCheckingAccount(checkingAccount1);
@@ -185,7 +185,7 @@ public class SolutionTest {
     	accountHolder1.addSavingsAccount(50000);
     	accountHolder1.addSavingsAccount(130000);
     	
-    	accountHolder1.addCDAccount(new CDOffering(1, 1.8/100),5000);
+    	accountHolder1.addCDAccount(5000);
     	
         assertEquals(251000, accountHolder1.getCombinedBalance(),0); 
     	
@@ -196,7 +196,7 @@ public class SolutionTest {
     	accountHolder2.addCheckingAccount(1000);
     	accountHolder2.addSavingsAccount(10000);    	
     	
-    	accountHolder2.addCDAccount(new CDOffering(2, 1.9/100),5000);
+    	accountHolder2.addCDAccount(5000);
     	MeritBank.addAccountHolder(accountHolder2);
     	
         assertEquals(16000, accountHolder2.getCombinedBalance(),0);     	
